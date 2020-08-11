@@ -2,7 +2,7 @@ class Solution:
     def findWords(self, words):
         row1 = 'qwertyuiop'
         row2 = 'asdfghjkl'
-        row3 = 'zxcvbnm'
+        row3 = 'zxcvbnm'        
         oneRowWords = []
         for word in words:
             if all(letter in row1 for letter in word.lower()):
@@ -34,8 +34,8 @@ class Solution:
          if(count1==len(words[k]) or count2==len(words[k]) or count3==len(words[k])):
              arr.append(words[k])
             
-        #return(arr)   
-        print(arr)  
+        return(arr)   
+        #print(arr)  
         
         
         
