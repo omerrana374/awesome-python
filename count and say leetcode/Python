@@ -1,0 +1,22 @@
+class Solution:
+    def countAndSay(self, n: int) -> str:
+        result = "1"    
+        for _ in range(n-1):
+            temp = ""   
+            current = result[0]
+            currentCount = 1
+            for item in result[1:]:
+                if item == current:
+                    
+                    currentCount += 1
+                else:
+                    
+                    temp += str(currentCount) + current
+                    
+                    current = item
+                    currentCount = 1
+          
+            temp += str(currentCount) + current
+            result = temp
+        return result
+        
