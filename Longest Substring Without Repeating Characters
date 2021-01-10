@@ -1,0 +1,13 @@
+def lengthOfLongestSubstring(self, s: str) -> int:
+        if not s:
+            return(0)
+        dic={}
+        count=start=0
+        for i in range(len(s)):
+            if s[i] in dic and start <=dic[s[i]]:
+                start=dic[s[i]]+1
+                
+            else:
+                count=max(count,i-start+1)
+            dic[s[i]]=i
+        return(count) 
